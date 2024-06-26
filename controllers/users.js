@@ -2,10 +2,7 @@ import express from "express";
 
 import { deleteUserById, getUsers } from "../db/user";
 
-export const getAllUsers = async (
-  req: express.Request,
-  res: express.Response
-) => {
+export const getAllUsers = async (req, res) => {
   try {
     const users = await getUsers();
 
@@ -16,10 +13,7 @@ export const getAllUsers = async (
   }
 };
 
-export const deleteUser = async (
-  req: express.Request,
-  res: express.Response
-) => {
+export const deleteUser = async (req, res) => {
   try {
     const { id } = req.params;
 
